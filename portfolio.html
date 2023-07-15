@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <header>
+      <div class="page-header section">
+        <nav class="nav">
+          <a class="logo link logo--margin-right" href="./index.html"
+            >Web<span class="page-header__logo">Studio</span></a
+          >
+          <div
+            class="menu-container menu-container--padding menu-container--flex"
+            id="menu-container"
+            data-menu
+          >
+            <ul
+              class="navigation__list navigation__list--margin-bottom navigation__list--margin-right"
+            >
+              <li class="navigation__item navigation__item--margin-bottom">
+                <a
+                  class="navigation__link navigation__link--height"
+                  href="./index.html"
+                  >Студія</a
+                >
+              </li>
+              <li class="navigation__item navigation__item--margin-bottom">
+                <a
+                  class="navigation__link navigation__link--height this-page"
+                  href="./portfolio.html"
+                  >Портфоліо</a
+                >
+              </li>
+              <li class="navigation__item navigation__item--margin-bottom">
+                <a class="navigation__link navigation__link--height" href=""
+                  >Контакти</a
+                >
+              </li>
+            </ul>
+            <ul
+              class="contacts__list contacts__list--margin-left contacts__list--margin-bottom-last"
+            >
+              <li
+                class="contacts__item contacts__item--margin-bottom contacts__item--margin-right"
+              >
+                <a
+                  class="contacts__link contacts__link--size-tel contacts__link--flex"
+                  href="tel:+380961111111"
+                >
+                  <svg
+                    width="10"
+                    height="14"
+                    class="contacts__icon contacts__icon--margin-right"
+                  >
+                    <use
+                      href="./images/icons/sprite-icons.svg#smartphone"
+                    ></use>
+                  </svg>
+                  +38 096 111 11 11</a
+                >
+              </li>
+              <li
+                class="contacts__item contacts__item--margin-bottom contacts__item--margin-right"
+              >
+                <a
+                  class="contacts__link contacts__link--size-envelop contacts__link--flex"
+                  href="mailto:info@devstudio.com"
+                >
+                  <svg
+                    width="14"
+                    height="10"
+                    class="contacts__icon contacts__icon--margin-right"
+                  >
+                    <use href="./images/icons/sprite-icons.svg#envelope"></use>
+                  </svg>
+                  info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="page-header__social-links">
+              <li class="page-header__social-links-item--margin-rigth">
+                <a class="page-header__social-link" href="">Instagram</a>
+              </li>
+              <li class="page-header__social-links-item--margin-rigth">
+                <a class="page-header__social-link" href="">Twitter</a>
+              </li>
+              <li class="page-header__social-links-item--margin-rigth">
+                <a class="page-header__social-link" href="">Facebook</a>
+              </li>
+              <li class="page-header__social-links-item--margin-rigth">
+                <a class="page-header__social-link" href="">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+          <button
+            type="button"
+            class="btn-menu btn-menu--margin"
+            aria-controls="menu-container"
+            aria-label="переключатель мобильного меню"
+            aria-expanded="false"
+            data-menu-button
+          >
+            <svg class="btn-menu__svg" width="40" height="40">
+              <use
+                class="icon-menu"
+                href="./images/icons/sprite-icons.svg#menu"
+              ></use>
+              <use
+                class="icon-cross"
+                href="./images/icons/sprite-icons.svg#close"
+              ></use>
+            </svg>
+          </button>
+        </nav>
+      </div>
+    </header>
+    <div class="line"></div>
+    <main>
+      <section class="section section--padding-bottom section--padding-top">
+        <h1 class="portfolio__title--hidden">Портфоліо</h1>
+        <ul class="filter__list filter__list--margin-bottom">
+          <li
+            class="filter__item--margin-right filter__item--margin-bottom filter__item--margin-center"
+          >
+            <button
+              type="button"
+              class="btn__filter btn__filter--size btn__filter--size-first-btn"
+            >
+              Усі
+            </button>
+          </li>
+          <li
+            class="filter__item--margin-right filter__item--margin-bottom filter__item--margin-center"
+          >
+            <button type="button" class="btn__filter btn__filter--size">
+              Веб-сайти
+            </button>
+          </li>
+          <li
+            class="filter__item--margin-right filter__item--margin-bottom filter__item--margin-center"
+          >
+            <button type="button" class="btn__filter btn__filter--size">
+              Додатки
+            </button>
+          </li>
+          <li
+            class="filter__item--margin-right filter__item--margin-bottom filter__item--margin-center"
+          >
+            <button type="button" class="btn__filter btn__filter--size">
+              Дизайн
+            </button>
+          </li>
+          <li class="filter__item--margin-right filter__item--margin-center">
+            <button type="button" class="btn__filter btn__filter--size">
+              Маркетинг
+            </button>
+          </li>
+        </ul>
+        <ul class="project__list">
+          <li class="card">
+            <div
+              class="card__top card__top--position-re card__top--padding card__top--margin-bottom"
+            >
+              <img
+                class="card_img"
+                src="./images/projects/img-450@1x.jpg"
+                alt=""
+                srcset="
+                  ./images/projects/img-450@1x.jpg 1x,
+                  ./images/projects/img-450@2x.jpg 2x,
+                  ./images/projects/img-450@3x.jpg 3x
+                "
+              />
+              <p
+                class="card__overlay card__overlay--position-ab card__overlay--padding"
+              >
+                Ресурс пропонує комплексні пропозиції з різним рівнем
+                функціоналу та сервісів. Все це дозволить відвідувачу отримати
+                вичерпні відомості про компанію чи приватну особу.
+              </p>
+            </div>
+            <div class="cad__bottom cad__bottom--margin">
+              <h2 class="card__title card__title--margin-bottom">Технокряк</h2>
+              <p class="card__job">Веб-сайт</p>
+            </div>
+          </li>
+          <li class="card">
+            <div
+              class="card__top card__top--position-re card__top--padding card__top--margin-bottom"
+            >
+              <img
+                class="card_img"
+                src="./images/projects/img-1-450@1x.jpg"
+                alt=""
+                srcset="
+                  ./images/projects/img-1-450@1x.jpg 1x,
+                  ./images/projects/img-1-450@2x.jpg 2x,
+                  ./images/projects/img-1-450@3x.jpg 3x
+                "
+              />
+              <p
+                class="card__overlay card__overlay--position-ab card__overlay--padding"
+              >
+                Ресурс пропонує комплексні пропозиції з різним рівнем
+                функціоналу та сервісів. Все це дозволить відвідувачу отримати
+                вичерпні відомості про компанію чи приватну особу.
+              </p>
+            </div>
+            <div class="cad__bottom cad__bottom--margin">
+              <h2 class="card__title card__title--margin-bottom">
+                Постер New Orlean vs Golden Star
+              </h2>
+              <p class="card__job">Дизайн</p>
+            </div>
+          </li>
+          <li class="card">
+            <div
+              class="card__top card__top--position-re card__top--padding card__top--margin-bottom"
+            >
+              <img
+                class="card_img"
+                src="./images/projects/img-2-450@1x.jpg"
+                alt=""
+                srcset="
+                  ./images/projects/img-2-450@1x.jpg 1x,
+                  ./images/projects/img-2-450@2x.jpg 2x,
+                  ./images/projects/img-2-450@3x.jpg 3x
+                "
+              />
+              <p
+                class="card__overlay card__overlay--position-ab card__overlay--padding"
+              >
+                Ресурс пропонує комплексні пропозиції з різним рівнем
+                функціоналу та сервісів. Все це дозволить відвідувачу отримати
+                вичерпні відомості про компанію чи приватну особу.
+              </p>
+            </div>
+            <div class="cad__bottom cad__bottom--margin">
+              <h2 class="card__title card__title--margin-bottom">
+                Ресторан Seafood
+              </h2>
+              <p class="card__job">Додаток</p>
+            </div>
+          </li>
+          <li class="card">
+            <div
+              class="card__top card__top--position-re card__top--padding card__top--margin-bottom"
+            >
+              <img
+                class="card_img"
+                src="./images/projects/img-3-450@1x.jpg"
+                alt=""
+                srcset="
+                  ./images/projects/img-3-450@1x.jpg 1x,
+                  ./images/projects/img-3-450@2x.jpg 2x,
+                  ./images/projects/img-3-450@3x.jpg 3x
+                "
+              />
+              <p
+                class="card__overlay card__overlay--position-ab card__overlay--padding"
+              >
+                Ресурс пропонує комплексні пропозиції з різним рівнем
+                функціоналу та сервісів. Все це дозволить відвідувачу отримати
+                вичерпні відомості про компанію чи приватну особу.
+              </p>
+            </div>
+            <div class="cad__bottom cad__bottom--margin">
+              <h2 class="card__title card__title--margin-bottom">
+                Проєкт Prime
+              </h2>
+              <p class="card__job">Маркетинг</p>
+            </div>
+          </li>
+          <li class="card">
+            <div
+              class="card__top card__top--position-re card__top--padding card__top--margin-bottom"
+            >
+              <img
+                class="card_img"
+                src="./images/projects/img-4-450@1x.jpg"
+                alt=""
+                srcset="
+                  ./images/projects/img-4-450@1x.jpg 1x,
+                  ./images/projects/img-4-450@2x.jpg 2x,
+                  ./images/projects/img-4-450@3x.jpg 3x
+                "
+              />
+              <p
+                class="card__overlay card__overlay--position-ab card__overlay--padding"
+              >
+                Ресурс пропонує комплексні пропозиції з різним рівнем
+                функціоналу та сервісів. Все це дозволить відвідувачу отримати
+                вичерпні відомості про компанію чи приватну особу.
+              </p>
+            </div>
+            <div class="cad__bottom cad__bottom--margin">
+              <h2 class="card__title card__title--margin-bottom">
+                Проєкт Boxes
+              </h2>
+              <p class="card__job">Додаток</p>
+            </div>
+          </li>
+          <li class="card">
+            <div
+              class="card__top card__top--position-re card__top--padding card__top--margin-bottom"
+            >
+              <img
+                class="card_img"
+                src="./images/projects/img-5-450@1x.jpg"
+                alt=""
+                srcset="
+                  ./images/projects/img-5-450@1x.jpg 1x,
+                  ./images/projects/img-5-450@2x.jpg 2x,
+                  ./images/projects/img-5-450@3x.jpg 3x
+                "
+              />
+              <p
+                class="card__overlay card__overlay--position-ab card__overlay--padding"
+              >
+                Ресурс пропонує комплексні пропозиції з різним рівнем
+                функціоналу та сервісів. Все це дозволить відвідувачу отримати
+                вичерпні відомості про компанію чи приватну особу.
+              </p>
+            </div>
+            <div class="cad__bottom cad__bottom--margin">
+              <h2 class="card__title card__title--margin-bottom">
+                Inspiration has no Borders
+              </h2>
+              <p class="card__job">Веб-сайт</p>
+            </div>
+          </li>
+          <li class="card">
+            <div
+              class="card__top card__top--position-re card__top--padding card__top--margin-bottom"
+            >
+              <img
+                class="card_img"
+                src="./images/projects/img-6-450@1x.jpg"
+                alt=""
+                srcset="
+                  ./images/projects/img-6-450@1x.jpg 1x,
+                  ./images/projects/img-6-450@2x.jpg 2x,
+                  ./images/projects/img-6-450@3x.jpg 3x
+                "
+              />
+              <p
+                class="card__overlay card__overlay--position-ab card__overlay--padding"
+              >
+                Ресурс пропонує комплексні пропозиції з різним рівнем
+                функціоналу та сервісів. Все це дозволить відвідувачу отримати
+                вичерпні відомості про компанію чи приватну особу.
+              </p>
+            </div>
+            <div class="cad__bottom cad__bottom--margin">
+              <h2 class="card__title card__title--margin-bottom">
+                Видання Limited Edition
+              </h2>
+              <p class="card__job">Дизайн</p>
+            </div>
+          </li>
+          <li class="card">
+            <div
+              class="card__top card__top--position-re card__top--padding card__top--margin-bottom"
+            >
+              <img
+                class="card_img"
+                src="./images/projects/img-7-450@1x.jpg"
+                alt=""
+                srcset="
+                  ./images/projects/img-7-450@1x.jpg 1x,
+                  ./images/projects/img-7-450@2x.jpg 2x,
+                  ./images/projects/img-7-450@3x.jpg 3x
+                "
+              />
+              <p
+                class="card__overlay card__overlay--position-ab card__overlay--padding"
+              >
+                Ресурс пропонує комплексні пропозиції з різним рівнем
+                функціоналу та сервісів. Все це дозволить відвідувачу отримати
+                вичерпні відомості про компанію чи приватну особу.
+              </p>
+            </div>
+            <div class="cad__bottom cad__bottom--margin">
+              <h2 class="card__title card__title--margin-bottom">Проєкт LAB</h2>
+              <p class="card__job">Маркетинг</p>
+            </div>
+          </li>
+          <li class="card">
+            <div
+              class="card__top card__top--position-re card__top--padding card__top--margin-bottom"
+            >
+              <img
+                class="card_img"
+                src="./images/projects/img-8-450@1x.jpg"
+                alt=""
+                srcset="
+                  ./images/projects/img-8-450@1x.jpg 1x,
+                  ./images/projects/img-8-450@2x.jpg 2x,
+                  ./images/projects/img-8-450@3x.jpg 3x
+                "
+              />
+              <p
+                class="card__overlay card__overlay--position-ab card__overlay--padding"
+              >
+                Ресурс пропонує комплексні пропозиції з різним рівнем
+                функціоналу та сервісів. Все це дозволить відвідувачу отримати
+                вичерпні відомості про компанію чи приватну особу.
+              </p>
+            </div>
+            <div class="cad__bottom cad__bottom--margin">
+              <h2 class="card__title card__title--margin-bottom">
+                Growing Business
+              </h2>
+              <p class="card__job">Додаток</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer class="page-footer page-footer--bg-cl">
+      <div
+        class="section page-footer__section page-footer__section--flex page-footer__section--padding"
+      >
+        <div class="footer__section footer__section--margin-bottom">
+          <div
+            class="wraper__footer-address wraper__footer-address--margin-right"
+          >
+            <a
+              class="logo link page-footer__logo--margin-bottom page-footer__logo--block"
+              href="./rebuild-homework.html"
+              >Web<span class="page-footer__logo">Studio</span></a
+            >
+            <div
+              class="page-footer__box--margin-right page-footer__box--margin-bottom"
+            >
+              <address class="address">
+                <p class="address__txt address__txt--margin-bottom">
+                  м. Київ, пр-т Лесі Українки, 26
+                </p>
+                <ul class="address__list">
+                  <li class="address__item address__item--margin-bottom">
+                    <a class="address__link" href="mailto:info@devstudio.com"
+                      >info@devstudio.com</a
+                    >
+                  </li>
+                  <li class="address__item">
+                    <a class="address__link" href="tel:+380961111111"
+                      >+38 096 111 11 11</a
+                    >
+                  </li>
+                </ul>
+              </address>
+            </div>
+          </div>
+          <div
+            class="join join--margin-left join--margin-bottom join--padding-top join--margin-right"
+          >
+            <p class="join__txt join__txt--margin-bottom">приєднуйтесь</p>
+            <ul class="social-links social-links--gap">
+              <li class="social-links__item">
+                <a
+                  href=""
+                  class="social-link social-link__page-footer--bg-cl social-link--position-relative"
+                  ><svg
+                    class="social-link__icon social-link__page-footer--fill social-link__icon--position-absolute"
+                    width="20px"
+                    height="20px"
+                  >
+                    <use
+                      href="./images/icons/sprite-icons.svg#instagram"
+                    ></use></svg
+                ></a>
+              </li>
+              <li class="social-links__item">
+                <a
+                  href=""
+                  class="social-link social-link__page-footer--bg-cl social-link--position-relative"
+                  ><svg
+                    class="social-link__icon social-link__page-footer--fill social-link__icon--position-absolute"
+                    width="20px"
+                    height="20px"
+                  >
+                    <use
+                      href="./images/icons/sprite-icons.svg#twitter"
+                    ></use></svg
+                ></a>
+              </li>
+              <li class="social-links__item">
+                <a
+                  href=""
+                  class="social-link social-link__page-footer--bg-cl social-link--position-relative"
+                  ><svg
+                    class="social-link__icon social-link__page-footer--fill social-link__icon--position-absolute"
+                    width="20px"
+                    height="20px"
+                  >
+                    <use
+                      href="./images/icons/sprite-icons.svg#facebook"
+                    ></use></svg
+                ></a>
+              </li>
+              <li class="social-links__item">
+                <a
+                  href=""
+                  class="social-link social-link__page-footer--bg-cl social-link--position-relative"
+                  ><svg
+                    class="social-link__icon social-link__page-footer--fill social-link__icon--position-absolute"
+                    width="20px"
+                    height="20px"
+                  >
+                    <use
+                      href="./images/icons/sprite-icons.svg#linkedin"
+                    ></use></svg
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="subscribe">
+          <p class="subscribe__txt subscribe__txt--margin-bottom">
+            Підпишіться на розсилку
+          </p>
+          <input
+            class="subscribe__input-email subscribe__input-email--margin-bottom subscribe__input-email--margin-right"
+            type="email"
+            placeholder="E-mail"
+          />
+          <button
+            class="btn button btn__subscribe--padding btn__subscribe--flex"
+            type="submit"
+          >
+            Підписатися<span
+              class="btn__icon-send btn__icon-send--margin-left"
+            ></span>
+          </button>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/menu.js"></script>
+  </body>
+</html>
