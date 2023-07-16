@@ -433,6 +433,10 @@ body {
   display: none;
 }
 
+.header {
+  border-bottom: 1px #F5F4FA solid;
+}
+
 .page-header__social-links {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -725,17 +729,13 @@ body {
 @media screen and (min-width: 768px) {
   .this-page::after {
     position: absolute;
-    bottom: 0;
+    bottom: -1.5%;
     left: 0;
     width: 100%;
-    content: "";
+    content: " ";
     border-radius: 2px;
     border: 2px solid #2196f3;
   }
-}
-
-.line {
-  border: 1px solid #ececec;
 }
 
 .section--padding-top {
