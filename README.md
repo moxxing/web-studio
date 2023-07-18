@@ -1,2 +1,2 @@
 # web-studio
-Стас Гурник
+Gurnik Stanislav
