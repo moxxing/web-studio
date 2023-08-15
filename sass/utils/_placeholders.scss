@@ -1,0 +1,88 @@
+@import "./break-point";
+
+%list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+%link {
+  text-decoration: none;
+}
+
+%button {
+  padding: 0;
+  border: 0;
+}
+
+%visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+%h-p {
+  margin: 0;
+}
+%img {
+  display: block;
+}
+
+%btn {
+  font-weight: $font-weight-700;
+  font-size: $size-16;
+  line-height: $size-30;
+  letter-spacing: $space-006em;
+
+  color: $color-3;
+
+  background: $color-2;
+  box-shadow: $shadow-044 $color-22;
+  border-radius: $size-4;
+
+  &:hover,
+  &:focus {
+    background-color: $color-11;
+  }
+}
+
+%section {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $size-15;
+  padding-right: $size-15;
+
+  @media screen and (min-width: $mobile) {
+    width: $mobile;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: $tablet;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: $desktop;
+  }
+}
+
+@mixin flex(
+  $display: flex,
+  $justify-content: flex-start,
+  $align-items: stretch
+) {
+  display: $display;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin grid($grid-number, $grid-margin) {
+  flex-basis: calc((100% - ($grid-number - 1) * $grid-margin) / 4);
+}

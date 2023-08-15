@@ -1,0 +1,21 @@
+@import "./base/normalize";
+@import "./utils/variables";
+@import "./utils/placeholders";
+@import "./base/stabdarts";
+@import "./utils/break-point";
+
+// Buttons
+@import "./components/btns";
+
+// header
+@import "./components/page-header";
+
+// main
+@import "./components/page-main-index";
+@import "./components/portfolio-main";
+
+// footer
+@import "./components/page-footer";
+
+// modal
+@import "./components/modal";

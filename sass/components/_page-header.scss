@@ -1,0 +1,265 @@
+.header {
+  border-bottom: 1px #F5F4FA solid;
+}
+.page-header {
+  &__social-links {
+    @extend %list;
+    @include flex;
+
+    @media screen and (min-width: $tablet) {
+      display: none;
+    }
+  }
+
+  &__social-links-item--margin-rigth:not(:last-child) {
+    margin-right: 20px;
+  }
+  &__social-link {
+    @extend %link;
+    font-weight: $font-weight-500;
+    font-size: $size-18;
+    line-height: $size-22;
+    letter-spacing: $space-002em;
+
+    color: $color-2;
+  }
+}
+
+.nav {
+  @include flex($align-items: center);
+
+  @media screen and (max-width: $tablet-before) {
+    height: 60px;
+  }
+}
+
+// Logo
+
+.logo {
+  @extend %link;
+
+  font-family: $second-font;
+  font-weight: $font-weight-700;
+  font-size: $size-24;
+  line-height: $size-28;
+  letter-spacing: $space-003em;
+  color: $color-2;
+
+  &--margin-right {
+    margin-right: 88px;
+  }
+  @media screen and (min-width: $tablet) {
+    font-size: $size-26;
+    line-height: $size-31;
+    &--margin-right {
+      margin-right: 92px;
+    }
+  }
+}
+
+.page-header__logo {
+  color: $color-6;
+}
+
+.menu-container {
+  width: 100%;
+  @media screen and (max-width: $tablet-before) {
+    display: none;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    padding: 20px;
+    background-color: $color-3;
+
+    &.is-open {
+      display: block;
+      z-index: 1;
+    }
+
+    &--flex.is-open {
+      @include flex;
+      flex-direction: column;
+    }
+
+    &--padding {
+      padding-top: 48px;
+      padding-bottom: 48px;
+      padding-right: 48px;
+      padding-left: 40px;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    @include flex($align-items: center);
+  }
+}
+// Navigation
+
+.navigation__list {
+  @extend %list;
+
+  font-weight: $font-weight-500;
+
+  @media screen and (max-width: $tablet-before) {
+    &--margin-bottom {
+      margin-bottom: auto;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    @include flex;
+    gap: 50px;
+  }
+}
+
+.navigation__item--margin-bottom:not(:last-child) {
+  @media screen and (max-width: $tablet-before) {
+    margin-bottom: 32px;
+  }
+}
+
+.navigation__link {
+  display: block;
+  @extend %link;
+  font-size: $size-40;
+  line-height: $size-47;
+
+  color: $color-4;
+  letter-spacing: $space-002em;
+
+  &:hover,
+  &:focus {
+    color: $color-2;
+  }
+
+  @media screen and (min-width: $tablet) {
+    position: relative;
+
+    font-size: $size-14;
+    line-height: $size-16;
+
+    &--height {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
+  }
+}
+
+// Contacts
+
+.contacts__list {
+  @extend %list;
+
+  @media screen and (max-width: $tablet-before) {
+    &--margin-bottom-last {
+      margin-bottom: 64px;
+    }
+  }
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-direction: column-reverse;
+
+    &--margin-left {
+      margin-left: auto;
+    }
+  }
+  @media screen and (min-width: $desktop) {
+    flex-direction: row-reverse;
+  }
+}
+
+.contacts__item--margin-bottom:not(:last-child) {
+  @media screen and (max-width: $tablet-before) {
+    margin-bottom: 32px;
+  }
+}
+
+.contacts__item--margin-bottom:last-child {
+  @media screen and (min-width: $tablet) and (max-width: $desktop-before) {
+    margin-bottom: 10px;
+  }
+}
+
+.contacts__item--margin-right:last-child {
+  @media screen and (min-width: $desktop) {
+    margin-right: 30px;
+  }
+}
+
+.contacts__icon {
+  fill: $color-5;
+  display: none;
+  @media screen and (min-width: $tablet) {
+    display: block;
+  }
+  &--margin-right {
+    margin-right: 8px;
+  }
+  @media screen and (min-width: $desktop) {
+    &--margin-right {
+      margin-right: 10px;
+    }
+  }
+}
+
+.contacts__link {
+  @extend %link;
+  font-weight: $font-weight-500;
+  color: $color-5;
+  letter-spacing: $space-002em;
+  display: block;
+
+  &--size-tel {
+    font-size: $size-34;
+    line-height: $size-40;
+
+    @media screen and (max-width: $tablet-before) {
+      color: #2196f3;
+    }
+  }
+
+  &--size-envelop {
+    font-size: $size-24;
+    line-height: $size-28;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: $size-12;
+    line-height: $size-14;
+
+    &--flex {
+      @include flex($align-items: center);
+    }
+  }
+  &:hover,
+  &:focus {
+    color: $color-2;
+  }
+
+  &:hover .contacts__icon,
+  &:focus .contacts__icon {
+    fill: $color-2;
+  }
+}
+
+.this-page {
+  color: $color-2;
+
+  @media screen and (max-width: $tablet-before) {
+    transform: translateY(-3px);
+  }
+  @media screen and (min-width: $tablet) {
+    &::after {
+      position: absolute;
+      bottom: -1.5%;
+      left: 0;
+      width: 100%;
+      content: " ";
+      border-radius: 2px;
+      border: 2px solid $color-2;
+    }
+  }
+}

@@ -1,0 +1,149 @@
+.portfolio__title {
+  &--hidden {
+    @extend %visually-hidden;
+  }
+}
+
+.filter__list {
+  @extend %list;
+
+  @include flex;
+  flex-wrap: wrap;
+  &--margin-bottom {
+    margin-bottom: $size-40;
+  }
+}
+
+.blank {
+  width: 100%;
+}
+
+.filter__item {
+  &--margin-bottom {
+    margin-bottom: 15px;
+  }
+  &--margin-right:not(:last-child) {
+    margin-right: $size-8;
+  }
+
+  @media screen and (min-width: $tablet) {
+    &--margin-center:first-child {
+      margin-left: auto;
+    }
+    &--margin-center:last-child {
+      margin-right: auto;
+    }
+  }
+}
+
+.project__list {
+  @extend %list;
+  margin: -15px;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.card {
+  background: $color-3;
+  border: 1px solid $color-15;
+  margin: 15px;
+
+  &:hover,
+  &:focus {
+    background: $color-3;
+    border: 1px solid $color-15;
+    box-shadow: $shadow-011 $color-20, $shadow-044$color-27,
+      $shadow-146 $color-28;
+
+    transform: translatey(-2px);
+  }
+
+  &:hover .card__overlay,
+  &:focus .card__overlay {
+    transform: translate(0);
+  }
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 30px * 2) / 2);
+  }
+  @media screen and (min-width: $desktop) {
+    width: calc((100% - 30px * 3) / 3);
+  }
+}
+
+.card__top {
+  display: inline-block;
+  overflow: hidden;
+
+  &--position-re {
+    position: relative;
+  }
+
+  &--margin-bottom {
+    margin-bottom: $size-20;
+  }
+}
+
+.card__overlay {
+  @extend %h-p;
+
+  background-color: $color-16;
+  height: 100%;
+  font-size: $size-18;
+  line-height: $size-28;
+  color: $color-3;
+
+  &--position-ab {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    transition: transform linear 500ms;
+    transform: translateY(200%);
+  }
+  &--padding {
+    padding-top: 77px;
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+}
+
+.card_img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.card__title {
+  @extend %h-p;
+
+  font-size: $size-18;
+  line-height: $size-36;
+
+  letter-spacing: $space-006em;
+
+  color: $color-4;
+
+  &--margin-bottom {
+    margin-bottom: $size-4;
+  }
+}
+
+.card__job {
+  @extend %h-p;
+
+  font-size: $size-16;
+  line-height: $size-30;
+
+  color: $color-5;
+}
+
+.cad__bottom {
+  &--margin {
+    margin-bottom: $size-20;
+    margin-right: $size-24;
+    margin-left: $size-24;
+  }
+}
