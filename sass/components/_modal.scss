@@ -83,6 +83,8 @@ body.modal-open {
 
   overflow-y: scroll;
 
+  cursor: pointer;
+
   &.is-hidden {
     opacity: 0;
     pointer-events: none;
@@ -95,6 +97,8 @@ body.modal-open {
 }
 
 .modal {
+cursor: default;
+
   @media (min-width: $mobile) {
     width: 450px;
     &--position {
